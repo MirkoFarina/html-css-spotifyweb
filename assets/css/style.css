@@ -73,6 +73,9 @@ header .btn:hover {
 
 /************************ MAIN  ************************/
 
+aside  a:hover, .content-main nav a:hover {
+  color: white;
+}
 /************************ ASIDE  ************************/
 aside {
   height: calc(100vh - 75px);
@@ -83,10 +86,6 @@ aside {
 aside  a {
   font-size: .7rem;
   font-weight: 700;
-}
-
-aside  a:hover {
-  color: white;
 }
 
 .content-aside {
@@ -290,12 +289,14 @@ footer {
 
 /************************ /FOOTER  ************************/
 
-@media screen and ( max-width: 1000px ) {
+
+/*********************** MEDIA *****************************/
+@media screen and ( max-width: 1050px ) {
   .content-main section .col {
     width: calc(100% / 4 - 10px);
   }
 }
-@media screen and ( max-width: 750px ) {
+@media screen and ( max-width: 850px ) {
   .content-main section .col {
     width: calc(100% / 2 - 10px);
   }
