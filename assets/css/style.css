@@ -25,7 +25,17 @@ header {
   position: fixed;
   top: 0;
   right: 0;
-  width: calc( 100% - 200px);
+  width: 100%;
+  justify-content: end;
+  align-items: center;
+}
+
+.button {
+  background-color: white;
+  width: 200px;
+  height: 40px;
+  margin-right: 20px;
+  color: black;
 }
 /************************ /HEADER  ************************/
 
@@ -35,21 +45,59 @@ header {
 /************************ ASIDE  ************************/
 aside {
   height: calc(100vh - 75px);
-  width: 200px;
   background-color: black;
-  position: absolute;
-  top: 0;
-  left: 0;
+  z-index: 2;
+}
+
+.content-aside {
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 80px;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.content-aside.full {
+  width: 200px;
+}
+.content-aside.xs {
+  display: none;
+}
+
+.top-bar {
+  width: 100%;
+  background-color: red;
+  border: 1px solid white;
+}
+
+.bottom-bar {
+  width: 100%;
+  background-color: red;
+  flex-shrink: 10;
 }
 /************************ /ASIDE  ************************/
 
 
-section {
+.content-main {
   padding-top: 80px;
   height: calc(100vh - 75px);
   overflow: auto;
   background-color: #141922;
-  margin-left: 200px;
+  width: calc(100vw - 200px);
+}
+
+.content-main nav {
+  width: 100%;
+  height: 50px;
+  background-color: aquamarine;
+  margin-bottom: 20px;
+}
+
+.content-main section.row {
+  width: 100%;
+  height: 450px;
+  background-color: red;
+  margin-bottom: 20px;
 }
 /************************ /MAIN  ************************/
 
@@ -59,5 +107,33 @@ section {
 footer {
   height: 75px;
   background-color: #282828;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
 }
+
+.left-nav, .middle-nav, .right-nav {
+  background-color: red;
+  border: 1px solid white;
+  width: 200px;
+  height: 50px;
+}
+
+
 /************************ /FOOTER  ************************/
+
+
+
+
+@media screen and ( max-width: 600px ) {
+  
+  .content-aside.full{
+  display: none;
+  }
+  .content-aside.xs{
+  display: flex;
+  }
+  .content-main {
+    width: calc(100vw - 50px);
+  }
+}
