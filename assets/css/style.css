@@ -13,6 +13,11 @@ body {
 img {
   max-width: 100%;
 }
+
+a {
+  text-decoration: none;
+  color: #6e6e6e;
+}
 /************************ /GENERAL  ************************/
 
 /************************ UTILITY  ************************/
@@ -23,6 +28,19 @@ img {
 .wrap {
   flex-wrap: wrap;
 }
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: 1px solid white;
+  border-radius: 20px;
+}
+
+
+
 /************************ /UTILITY  ************************/
 
 
@@ -38,17 +56,18 @@ header {
   align-items: center;
 }
 
-.button {
-  background-color: white;
-  width: 200px;
-  height: 40px;
+header .btn {
   margin-right: 20px;
-  color: black;
+  color: white;
+  font-size: .8rem;
+}
+
+header .btn:hover {
+  transform: scale(1.1);
 }
 /************************ /HEADER  ************************/
 
 /************************ MAIN  ************************/
-
 
 /************************ ASIDE  ************************/
 aside {
@@ -57,12 +76,26 @@ aside {
   z-index: 2;
 }
 
+aside  a {
+  font-size: .7rem;
+  font-weight: 700;
+}
+
+aside  a:hover {
+  color: white;
+}
+
+aside  ul {
+  list-style: none;
+}
+
 .content-aside {
+  height: 100%;
   flex-direction: column;
   justify-content: space-between;
   gap: 80px;
   overflow: hidden;
-  padding: 10px;
+  padding-bottom: 10px;
 }
 
 .content-aside.full {
@@ -72,16 +105,98 @@ aside {
   display: none;
 }
 
-.top-bar {
-  width: 100%;
-  background-color: red;
-  border: 1px solid white;
+aside .top .logo {
+  line-height: 75px;
+  padding-left: 15px;
 }
 
-.bottom-bar {
-  width: 100%;
-  background-color: red;
-  flex-shrink: 10;
+aside .top .logo img {
+  width: 120px;
+  vertical-align: middle;
+}
+
+aside .top nav.action {
+  margin-bottom: 25px;
+}
+
+aside .top  li {
+  margin-bottom: 10px;
+  padding-left: 15px;
+}
+
+aside .top li a svg {
+  width: 25px;
+  vertical-align: middle;
+}
+
+aside .top li a i {
+  font-size: 40px;
+  vertical-align: middle;
+  padding-right: 5px;
+}
+
+aside .top nav.playlist h5{
+  margin-bottom: 10px;
+  padding-left: 15px;
+}
+
+aside .bottom {
+  padding-left: 15px;
+}
+
+aside .bottom a {
+  display: inline-block;
+}
+
+aside .bottom svg {
+  width: 1.5rem;
+  vertical-align: middle;
+  padding-right: 8px;
+}
+
+aside .bottom a::after {
+  content: '';
+  display: block;
+  height: 8px;
+  border-bottom: 1px solid #6e6e6e;
+  width: 165%;
+  margin-bottom: 15px;
+}
+
+aside .bottom .user img, 
+.content-aside.xs .bottom-xs img {
+  background-color: grey;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+aside .bottom .user span {
+  padding-left: 5px;
+  font-size: .8rem;
+  font-weight: bold;
+}
+
+.content-aside.xs {
+  padding: 5px 10px ;
+  text-align: center;
+}
+
+.content-aside.xs  li {
+  margin-bottom: 10px;
+}
+
+.content-aside.xs .top-xs svg {
+  width: 25px;
+}
+
+.content-aside.xs .bottom-xs svg {
+  width: 1rem;
+}
+
+.content-aside.xs .top-xs img {
+  filter: invert(1);
 }
 /************************ /ASIDE  ************************/
 
@@ -89,9 +204,9 @@ aside {
 .content-main {
   padding-top: 80px;
   height: calc(100vh - 75px);
+  width: calc(100vw - 200px);
   overflow: auto;
   background-color: #141922;
-  width: calc(100vw - 200px);
 }
 
 .content-main nav {
@@ -146,7 +261,7 @@ footer {
     width: calc(100% / 4);
   }
 }
-@media screen and ( max-width: 800px ) {
+@media screen and ( max-width: 750px ) {
   .col {
     width: calc(100% / 2);
   }
@@ -154,14 +269,16 @@ footer {
 
 
 @media screen and ( max-width: 600px ) {
-  
+  /* main */
   .content-aside.full{
   display: none;
   }
   .content-aside.xs{
   display: flex;
   }
+
   .content-main {
     width: calc(100vw - 50px);
   }
+   /* /main */
 }
