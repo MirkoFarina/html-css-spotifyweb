@@ -18,6 +18,10 @@ a {
   text-decoration: none;
   color: #6e6e6e;
 }
+
+ul {
+  list-style: none;
+}
 /************************ /GENERAL  ************************/
 
 /************************ UTILITY  ************************/
@@ -83,10 +87,6 @@ aside  a {
 
 aside  a:hover {
   color: white;
-}
-
-aside  ul {
-  list-style: none;
 }
 
 .content-aside {
@@ -202,36 +202,70 @@ aside .bottom .user span {
 
 
 .content-main {
-  padding-top: 80px;
+  padding-top: 100px;
   height: calc(100vh - 75px);
   width: calc(100vw - 200px);
   overflow: auto;
   background-color: #141922;
 }
-
+/* nav bar  */
 .content-main nav {
-  width: 100%;
-  height: 50px;
-  background-color: aquamarine;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+}
+.content-main nav ul{
+  justify-content: center;
+}
+.content-main nav ul li{
+  margin-right: 10px;
+}
+
+.content-main nav a {
+  font-size: .8rem;
+  font-weight: bold;
+}
+/* nav bar  */
+section h2 {
+  padding-left: 10px;
+  margin-bottom: 30px;
 }
 
 .content-main section{
-  width: 100%;
-  background-color: red;
-  margin-bottom: 20px;
+  padding-left: 20px;
+  margin-bottom: 40px;
 }
 
-.col {
-  background-color: green;
-  width: calc(100% / 6);
+.content-main section .col {
+  width: calc(100% / 6 - 10px);
   padding: 0 10px;
-  border: 1px solid white;
 }
 
-.card {
-  background-color: violet;
-  height: 200px;
+.card .cover {
+  margin-bottom: 10px;
+}
+
+.card .title {
+  text-align: center;
+}
+
+.card .title h3 {
+  margin-bottom: 5px;
+  font-size: .9rem;
+}
+.card .title h4 {
+  font-size: .7rem;
+  color: #6e6e6e;
+}
+
+section.subtitle h2::after {
+  content: ' Più ascolti, più accurati saranno i suggerimenti.';
+  display: block;
+  font-size: .8rem;
+  color: #6e6e6e;
+  padding-top: 20px;
+}
+
+section#popular-artists img {
+  border-radius: 50%;
 }
 /************************ /MAIN  ************************/
 
@@ -257,13 +291,13 @@ footer {
 /************************ /FOOTER  ************************/
 
 @media screen and ( max-width: 1000px ) {
-  .col {
-    width: calc(100% / 4);
+  .content-main section .col {
+    width: calc(100% / 4 - 10px);
   }
 }
 @media screen and ( max-width: 750px ) {
-  .col {
-    width: calc(100% / 2);
+  .content-main section .col {
+    width: calc(100% / 2 - 10px);
   }
 }
 
