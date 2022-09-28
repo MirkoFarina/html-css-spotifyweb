@@ -1,5 +1,63 @@
+/************************ GENERAL  ************************/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+/************************ /GENERAL  ************************/
+
+/************************ UTILITY  ************************/
+.d-flex {
+  display: flex;
+}
+/************************ /UTILITY  ************************/
+
+
+/************************ HEADER  ************************/
+header {
+  height: 75px;
+  background-color: rgba(8,11,18, .8);
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: calc( 100% - 200px);
+}
+/************************ /HEADER  ************************/
+
+/************************ MAIN  ************************/
+
+
+/************************ ASIDE  ************************/
+aside {
+  height: calc(100vh - 75px);
+  width: 200px;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/************************ /ASIDE  ************************/
+
+
+section {
+  padding-top: 80px;
+  height: calc(100vh - 75px);
+  overflow: auto;
+  background-color: #141922;
+  margin-left: 200px;
+}
+/************************ /MAIN  ************************/
+
+
+
+/************************ FOOTER  ************************/
+footer {
+  height: 75px;
+  background-color: #282828;
+}
+/************************ /FOOTER  ************************/
