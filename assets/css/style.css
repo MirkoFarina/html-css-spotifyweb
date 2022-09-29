@@ -228,6 +228,27 @@ section h2 {
 
 .card .cover {
   margin-bottom: 10px;
+  position: relative;
+}
+
+.cover i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  display: none;
+}
+
+.cover img {
+  transition: all .5s;
+}
+
+.cover:hover img{
+  filter: brightness(60%);
+}
+.cover:hover  i{
+  display: block;
 }
 
 .card .title {
@@ -252,6 +273,10 @@ section.subtitle h2::after {
 }
 
 section#popular-artists img {
+  border-radius: 50%;
+}
+
+section#popular-artists .shadow {
   border-radius: 50%;
 }
 /************************ /MAIN  ************************/
@@ -285,9 +310,8 @@ footer .stato {
   height: 3px;
 }
 
-.left-nav, .right-nav {
-  align-items: center;
-  width: 200px;
+footer .stato:hover {
+ background-color: yellowgreen;
 }
 
 .left-nav img {
@@ -304,8 +328,20 @@ footer .stato {
   padding-right: 30px;
 }
 
+.left-nav .name-song h5:hover {
+  text-decoration: underline;
+  color: white;
+}
+
 .left-nav .action {
   color: #6e6e6e;
+}
+
+.left-nav .fa-heart:hover {
+  color: white;
+}
+.left-nav .fa-folder:hover {
+  color: white;
 }
 
 .left-nav .action i:first-child {
@@ -337,6 +373,11 @@ footer .stato {
   font-size: 1.8rem;
   padding-left: 25px;
   padding-right: 25px;
+}
+
+.action-top .fa-circle-play:hover {
+  transform: scale(1.2);
+  cursor: pointer;
 }
 
 .time-music {
