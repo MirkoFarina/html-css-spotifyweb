@@ -287,6 +287,7 @@ footer .stato {
 
 .left-nav, .right-nav {
   align-items: center;
+  width: 200px;
 }
 
 .left-nav img {
@@ -312,7 +313,7 @@ footer .stato {
 }
 
 .middle-nav {
-  width: 40%;
+  width: 45%;
   text-align: center;
   padding-right: 20px;
   padding-left: 10px;
@@ -325,17 +326,17 @@ footer .stato {
 }
 
 .action-top i:first-child {
-  padding-right: 25px;
+  padding-right: 15px;
 }
 
 .action-top i:last-child {
-  padding-left: 25px;
+  padding-left: 15px;
 }
 
 .action-top .fa-circle-play {
   font-size: 1.8rem;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .time-music {
@@ -353,11 +354,11 @@ footer .stato {
 }
 
 .middle-nav span {
-  font-size: .6rem;
+  font-size: .5rem;
 }
 
 .right-nav .barra {
-  width: 100px;
+  width: 150px;
   display: inline-block;
 }
 .right-nav .stato {
@@ -367,6 +368,11 @@ footer .stato {
 footer .right-nav i {
   padding-right: 10px;
   opacity: .8;
+  font-size: .6rem;
+}
+
+footer .right-nav .fa-chevron-up {
+  display: none;
 }
 
 /************************ /FOOTER  ************************/
@@ -423,4 +429,22 @@ footer .right-nav i {
   }
 
    /* /main */
+
+
+}
+
+@media screen and ( max-width: 500px ) {
+     /* footer */
+
+     footer .right-nav {
+      justify-content: flex-end;
+    }
+  
+     footer .right-nav .fa-chevron-up {
+      display: inline-block;
+    }
+  
+    footer .right-nav .barra {
+      display: none;
+    }
 }
