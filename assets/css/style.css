@@ -73,14 +73,22 @@ header .btn:hover {
 
 /************************ MAIN  ************************/
 
+main {
+  height: calc(100vh - 75px);
+}
+
 aside  a:hover, .content-main nav a:hover {
   color: white;
 }
+
+aside  a:hover svg {
+  opacity: 1;
+}
 /************************ ASIDE  ************************/
 aside {
-  height: calc(100vh - 75px);
   background-color: black;
   z-index: 2;
+  overflow: hidden;
 }
 
 aside  a {
@@ -89,70 +97,74 @@ aside  a {
 }
 
 .content-aside {
-  height: 100%;
+  height: calc(100vh - 75px);
+  width: 200px;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 80px;
-  overflow: hidden;
-  padding-bottom: 10px;
 }
 
-.content-aside.full {
-  width: 200px;
-}
-.content-aside.xs {
-  display: none;
-}
-
-aside .top .logo {
+.content-aside .logo {
   line-height: 75px;
   padding-left: 15px;
 }
-
-aside .top .logo img {
+.content-aside .logo .big-logo {
   width: 120px;
   vertical-align: middle;
 }
 
-aside .top nav.action {
+.content-aside nav.action {
   margin-bottom: 25px;
 }
 
-aside .top  li {
+nav.action .xl-d-none {
+  display: none;
+}
+
+nav.action .logo-xs {
+  width: 25px;
+  filter: invert(1);
+}
+aside nav  li {
   margin-bottom: 10px;
   padding-left: 15px;
 }
-
-aside .top li a svg {
+aside  a svg {
   width: 25px;
   vertical-align: middle;
+  opacity: .5;
 }
-
-aside .top li a i {
+aside a i {
   font-size: 40px;
   vertical-align: middle;
   padding-right: 5px;
+  padding-left: 15px;
+  margin-bottom: 10px;
+}
+/* per creare l'effetto overflow sottraggo la grandezza dei contenuti del contenitore a 100vh per far si che la mia ul sia grande il restante dello spazio */
+aside  nav.playlist ul{
+  height: calc(100vh - 430px);
+  overflow-y: auto;
+  padding-bottom: 60px;
 }
 
-aside .top nav.playlist h5{
+aside  nav.playlist h5{
   margin-bottom: 10px;
   padding-left: 15px;
 }
 
 aside .bottom {
   padding-left: 15px;
+  padding-bottom: 10px;
 }
-
 aside .bottom a {
   display: inline-block;
 }
-
 aside .bottom svg {
   width: 1.5rem;
   vertical-align: middle;
   padding-right: 8px;
 }
-
 aside .bottom a::after {
   content: '';
   display: block;
@@ -161,8 +173,7 @@ aside .bottom a::after {
   width: 165%;
   margin-bottom: 15px;
 }
-
-aside .bottom .user img, 
+aside .bottom .user img,
 .content-aside.xs .bottom-xs img {
   background-color: grey;
   border-radius: 50%;
@@ -170,39 +181,17 @@ aside .bottom .user img,
   height: 25px;
   vertical-align: middle;
 }
-
 aside .bottom .user span {
   padding-left: 5px;
   font-size: .8rem;
   font-weight: bold;
 }
 
-.content-aside.xs {
-  padding: 5px 10px ;
-  text-align: center;
-}
-
-.content-aside.xs  li {
-  margin-bottom: 10px;
-}
-
-.content-aside.xs .top-xs svg {
-  width: 25px;
-}
-
-.content-aside.xs .bottom-xs svg {
-  width: 1rem;
-}
-
-.content-aside.xs .top-xs img {
-  filter: invert(1);
-}
 /************************ /ASIDE  ************************/
 
 
 .content-main {
   padding-top: 100px;
-  height: calc(100vh - 75px);
   width: calc(100vw - 200px);
   overflow: auto;
   background-color: #141922;
@@ -305,15 +294,38 @@ footer {
 
 @media screen and ( max-width: 600px ) {
   /* main */
-  .content-aside.full{
-  display: none;
-  }
-  .content-aside.xs{
-  display: flex;
-  }
-
   .content-main {
     width: calc(100vw - 50px);
   }
+
+  .content-aside {
+    width: 50px;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  aside nav li,
+  aside .bottom {
+    padding-left: 0;
+  }
+
+  aside .xs-d-none {
+    display: none;
+  }
+
+  nav.action .xl-d-none {
+    display: inline-block;
+  }
+
+  aside .bottom svg {
+    width: 1.2rem;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  aside .bottom a::after {
+    display: none;
+  }
+
    /* /main */
 }
