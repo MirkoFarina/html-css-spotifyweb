@@ -197,14 +197,13 @@ aside .bottom .user span {
   background-color: #141922;
 }
 /* nav bar  */
-.content-main nav {
-  margin-bottom: 25px;
-}
+
 .content-main nav ul{
   justify-content: center;
 }
 .content-main nav ul li{
-  margin-right: 10px;
+  margin-right: 20px;
+  padding-bottom: 35px;
 }
 
 .content-main nav a {
@@ -265,27 +264,123 @@ footer {
   background-color: #282828;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  padding: 0 10px;
 }
 
-.left-nav, .middle-nav, .right-nav {
-  background-color: red;
-  border: 1px solid white;
-  width: 200px;
-  height: 50px;
+footer .barra {
+  position: relative;
+  background-color: #5D5D5D;
 }
 
+footer .stato {
+  position: absolute;
+  background-color: #CCCCCC;
+  top: 0;
+  left: 0;
+}
+
+footer .barra, 
+footer .stato {
+  border-radius: 20px;
+  height: 3px;
+}
+
+.left-nav, .right-nav {
+  align-items: center;
+}
+
+.left-nav img {
+  width: 50px;
+  padding-right: 10px;
+}
+
+.left-nav .name-song {
+  font-size: .7rem;
+}
+
+.left-nav .name-song h5 {
+  color: #6e6e6e;
+  padding-right: 30px;
+}
+
+.left-nav .action {
+  color: #6e6e6e;
+}
+
+.left-nav .action i:first-child {
+  padding-right: 10px;
+}
+
+.middle-nav {
+  width: 40%;
+  text-align: center;
+  padding-right: 20px;
+  padding-left: 10px;
+}
+
+.action-top  {
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.action-top i:first-child {
+  padding-right: 25px;
+}
+
+.action-top i:last-child {
+  padding-left: 25px;
+}
+
+.action-top .fa-circle-play {
+  font-size: 1.8rem;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.time-music {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.middle-nav .barra {
+  width: 90%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.middle-nav .stato {
+  width: 30%;
+}
+
+.middle-nav span {
+  font-size: .6rem;
+}
+
+.right-nav .barra {
+  width: 100px;
+  display: inline-block;
+}
+.right-nav .stato {
+  width: 20%;
+}
+
+footer .right-nav i {
+  padding-right: 10px;
+  opacity: .8;
+}
 
 /************************ /FOOTER  ************************/
 
 
 /*********************** MEDIA *****************************/
 @media screen and ( max-width: 1050px ) {
+  /* main */
   .content-main section .col {
     width: calc(100% / 4 - 10px);
   }
 }
 @media screen and ( max-width: 850px ) {
+  /* main */
   .content-main section .col {
     width: calc(100% / 2 - 10px);
   }
