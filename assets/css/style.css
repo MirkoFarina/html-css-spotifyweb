@@ -16,7 +16,7 @@ img {
 
 a {
   text-decoration: none;
-  color: #6e6e6e;
+  color: #87898d;
 }
 
 ul {
@@ -43,7 +43,9 @@ ul {
   border-radius: 20px;
 }
 
-
+.active-left {
+  border-left: 2px solid #a8f82e;
+}
 
 /************************ /UTILITY  ************************/
 
@@ -58,6 +60,7 @@ header {
   width: 100%;
   justify-content: end;
   align-items: center;
+  z-index: 1;
 }
 
 header .btn {
@@ -169,7 +172,7 @@ aside .bottom a::after {
   content: '';
   display: block;
   height: 8px;
-  border-bottom: 1px solid #6e6e6e;
+  border-bottom: 1px solid #87898d;
   width: 165%;
   margin-bottom: 15px;
 }
@@ -210,6 +213,16 @@ aside .bottom .user span {
   font-size: .8rem;
   font-weight: bold;
 }
+
+.content-main nav a.active::after {
+  content: '';
+  display: block;
+  margin: 3px auto 0;
+  height: 2px;
+  width: 30px;
+  background-color: #a8f82e;
+}
+
 /* nav bar  */
 section h2 {
   padding-left: 10px;
@@ -251,6 +264,10 @@ section h2 {
   display: block;
 }
 
+.card:hover {
+  cursor: pointer;
+}
+
 .card .title {
   text-align: center;
 }
@@ -268,7 +285,7 @@ section.subtitle h2::after {
   content: ' Più ascolti, più accurati saranno i suggerimenti.';
   display: block;
   font-size: .8rem;
-  color: #6e6e6e;
+  color: #87898d;
   padding-top: 20px;
 }
 
@@ -334,7 +351,7 @@ footer .stato:hover {
 }
 
 .left-nav .action {
-  color: #6e6e6e;
+  color: #87898d;
 }
 
 .left-nav .fa-heart:hover {
