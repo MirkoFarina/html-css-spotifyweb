@@ -298,9 +298,6 @@ section#popular-artists img {
   border-radius: 50%;
 }
 
-section#popular-artists .shadow {
-  border-radius: 50%;
-}
 /************************ /MAIN  ************************/
 
 
@@ -384,8 +381,7 @@ footer .barra:hover .stato i{
 .middle-nav {
   width: 45%;
   text-align: center;
-  padding-right: 20px;
-  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .action-top  {
