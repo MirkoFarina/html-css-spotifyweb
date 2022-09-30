@@ -5,6 +5,12 @@
   box-sizing: border-box;
 }
 
+:root {
+  --lightgrey: #87898d;
+  --green: #bcff33;
+  --alignment: 15px;
+}
+
 body {
   color: white;
   font-family: 'Montserrat', sans-serif;
@@ -16,7 +22,7 @@ img {
 
 a {
   text-decoration: none;
-  color: #87898d;
+  color: var(--lightgrey);
 }
 
 ul {
@@ -44,7 +50,7 @@ ul {
 }
 
 .active-left {
-  border-left: 2px solid #a8f82e;
+  border-left: 2px solid var(--green);
 }
 
 /************************ /UTILITY  ************************/
@@ -60,7 +66,7 @@ header {
   width: 100%;
   justify-content: end;
   align-items: center;
-  z-index: 1;
+  z-index: 998;
 }
 
 header .btn {
@@ -90,7 +96,7 @@ aside  a:hover svg {
 /************************ ASIDE  ************************/
 aside {
   background-color: black;
-  z-index: 2;
+  z-index: 999;
   overflow: hidden;
 }
 
@@ -109,7 +115,7 @@ aside  a {
 
 .content-aside .logo {
   line-height: 75px;
-  padding-left: 15px;
+  padding-left: var(--alignment);
 }
 .content-aside .logo .big-logo {
   width: 120px;
@@ -130,7 +136,7 @@ nav.action .logo-xs {
 }
 aside nav  li {
   margin-bottom: 10px;
-  padding-left: 15px;
+  padding-left: var(--alignment);
 }
 aside  a svg {
   width: 25px;
@@ -141,7 +147,7 @@ aside a i {
   font-size: 40px;
   vertical-align: middle;
   padding-right: 5px;
-  padding-left: 15px;
+  padding-left: var(--alignment);
   margin-bottom: 10px;
 }
 /* per creare l'effetto overflow sottraggo la grandezza dei contenuti del contenitore a 100vh per far si che la mia ul sia grande il restante dello spazio */
@@ -153,11 +159,11 @@ aside  nav.playlist ul{
 
 aside  nav.playlist h5{
   margin-bottom: 10px;
-  padding-left: 15px;
+  padding-left: var(--alignment);
 }
 
 aside .bottom {
-  padding-left: 15px;
+  padding-left: var(--alignment);
   padding-bottom: 10px;
 }
 aside .bottom a {
@@ -172,12 +178,11 @@ aside .bottom a::after {
   content: '';
   display: block;
   height: 8px;
-  border-bottom: 1px solid #87898d;
+  border-bottom: 1px solid var(--lightgrey);
   width: 165%;
   margin-bottom: 15px;
 }
-aside .bottom .user img,
-.content-aside.xs .bottom-xs img {
+aside .bottom .user img {
   background-color: grey;
   border-radius: 50%;
   width: 25px;
@@ -220,7 +225,7 @@ aside .bottom .user span {
   margin: 3px auto 0;
   height: 2px;
   width: 30px;
-  background-color: #a8f82e;
+  background-color: var(--green);
 }
 
 /* nav bar  */
@@ -278,14 +283,14 @@ section h2 {
 }
 .card .title h4 {
   font-size: .7rem;
-  color: #6e6e6e;
+  color: var(--lightgrey);
 }
 
 section.subtitle h2::after {
   content: ' Più ascolti, più accurati saranno i suggerimenti.';
   display: block;
   font-size: .8rem;
-  color: #87898d;
+  color: var(--lightgrey);
   padding-top: 20px;
 }
 
@@ -336,7 +341,7 @@ footer .stato {
 }
 
 footer .barra:hover .stato{
- background-color: yellowgreen;
+ background-color: var(--green);
 }
 footer .barra:hover .stato i{
  display: block;
@@ -352,7 +357,7 @@ footer .barra:hover .stato i{
 }
 
 .left-nav .name-song h5 {
-  color: #87898d;
+  color: var(--lightgrey);
   padding-right: 30px;
 }
 
@@ -362,7 +367,7 @@ footer .barra:hover .stato i{
 }
 
 .left-nav .action {
-  color: #87898d;
+  color: var(--lightgrey);
 }
 
 .left-nav .fa-heart:hover {
