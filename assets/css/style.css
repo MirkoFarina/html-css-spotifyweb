@@ -310,15 +310,23 @@ footer {
 }
 
 footer .barra {
-  position: relative;
   background-color: #5D5D5D;
 }
 
 footer .stato {
-  position: absolute;
+  position: relative;
   background-color: #CCCCCC;
   top: 0;
   left: 0;
+}
+
+footer .barra .stato i {
+  position: absolute;
+  top: 0px;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  font-size: .8rem;
+  display: none;
 }
 
 footer .barra, 
@@ -327,8 +335,11 @@ footer .stato {
   height: 3px;
 }
 
-footer .stato:hover {
+footer .barra:hover .stato{
  background-color: yellowgreen;
+}
+footer .barra:hover .stato i{
+ display: block;
 }
 
 .left-nav img {
@@ -341,7 +352,7 @@ footer .stato:hover {
 }
 
 .left-nav .name-song h5 {
-  color: #6e6e6e;
+  color: #87898d;
   padding-right: 30px;
 }
 
@@ -415,6 +426,7 @@ footer .stato:hover {
   font-size: .5rem;
 }
 
+
 .right-nav .barra {
   width: 150px;
   display: inline-block;
@@ -423,7 +435,7 @@ footer .stato:hover {
   width: 20%;
 }
 
-footer .right-nav i {
+footer .right-nav  i.action {
   padding-right: 10px;
   opacity: .8;
   font-size: .6rem;
