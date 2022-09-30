@@ -154,7 +154,7 @@ aside a i {
 aside  nav.playlist ul{
   height: calc(100vh - 430px);
   overflow-y: auto;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
 }
 
 aside  nav.playlist h5{
